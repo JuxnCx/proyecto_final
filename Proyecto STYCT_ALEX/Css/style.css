@@ -1,0 +1,474 @@
+/* Estilos generales para el cuerpo de la página */
+
+body {
+    font-family: 'Roboto';
+    /* Fuente principal para el cuerpo de la página */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos generales para el elemento html */
+
+html {
+    font-family: 'Roboto' inherit;
+    /* Hereda la fuente principal de 'body' */
+}
+
+
+/* Estilos para el encabezado de la página */
+
+header {
+    background-color: #ff6347;
+    /* Fondo del encabezado en rojo coral */
+    color: white;
+    /* Texto en color blanco */
+    padding: 1em 0;
+    /* Espaciado interno superior e inferior del encabezado */
+    bottom: 0;
+}
+
+
+/* Estilos para el menú de navegación */
+
+.ui.inverted.menu.grey.fixed {
+    display: flex;
+    justify-content: center;
+    background-color: #ff6347;
+    /* Fondo del menú en rojo coral */
+    width: 100%;
+    padding: 0em 0;
+    box-sizing: border-box;
+}
+
+.ui.inverted.menu.grey.fixed a {
+    color: #fff;
+    /* Color del texto del menú */
+    text-decoration: none;
+    margin: 0 20px;
+    /* Margen derecho e izquierdo entre elementos del menú */
+}
+
+.ui.inverted.menu.grey.fixed a:hover {
+    text-decoration: underline;
+    /* Subrayado al pasar el mouse sobre un enlace del menú */
+}
+
+
+/* Estilos para el contenedor del título */
+
+.discover-container {
+    position: relative;
+    max-width: 70%;
+    /* Ancho máximo del contenedor del título */
+    background-color: rgba(211, 211, 211, 0.473);
+    /* Fondo del contenedor con transparencia */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Sombra ligera */
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+}
+
+
+/* Estilos para el título dentro del contenedor */
+
+.discover-container .ui.header.discover {
+    font-size: 1.4em;
+    /* Tamaño del texto del título */
+    color: #1b1b1bb4;
+    /* Color del texto del título en rojo coral con transparencia */
+    text-align: center;
+    margin-bottom: 10px;
+    /* Margen inferior del título */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    /* Sombra suave del texto */
+}
+
+
+/* Línea decorativa debajo del título */
+
+.discover-container .ui.header.discover::after {
+    content: '';
+    display: block;
+    height: 2px;
+    /* Grosor de la línea */
+    width: 75%;
+    /* Longitud de la línea */
+    background-color: #ff6347;
+    /* Color de la línea en rojo coral */
+    margin: 5px auto;
+    /* Margen de la línea */
+}
+
+
+/* Cambio de color de fondo al pasar el mouse */
+
+.discover-container:hover {
+    background-color: rgba(255, 99, 71, 0.6);
+    /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+/* Estilos para el contenedor de iconos sociales */
+
+.social-icons {
+    position: fixed;
+    top: 50%;
+    /* Ubicación vertical del contenedor de iconos sociales */
+    right: 20px;
+    /* Ubicación derecha del contenedor de iconos sociales */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Estilos para cada enlace de icono social */
+
+.social-icons a {
+    color: #ff6347;
+    /* Color del ícono social */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fondo transparente del ícono social */
+    padding: 10px;
+    /* Espaciado interno para el contenedor del ícono social */
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+    margin-bottom: 0;
+}
+
+
+/* Ajuste del tamaño de los iconos sociales */
+
+.social-icons i {
+    font-size: 24px;
+    /* Tamaño de los íconos sociales */
+    z-index: 1;
+}
+
+
+/* Redondea solo el primer y último enlace */
+
+.social-icons a:first-child {
+    border-top-left-radius: 15px;
+    /* Esquina redondeada superior izquierda */
+    border-top-right-radius: 15px;
+    /* Esquina redondeada superior derecha */
+}
+
+.social-icons a:last-child {
+    border-bottom-left-radius: 15px;
+    /* Esquina redondeada inferior izquierda */
+    border-bottom-right-radius: 15px;
+    /* Esquina redondeada inferior derecha */
+    margin-bottom: 10px;
+    /* Margen inferior del último enlace */
+}
+
+
+/* Cambio de color de fondo al pasar el mouse */
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+/* Estilos para la sección de información meteorológica */
+
+#weather-container {
+    position: fixed;
+    top: 8%;
+    /* Ubicación vertical del contenedor de información meteorológica */
+    right: 0px;
+    /* Ubicación derecha del contenedor de información meteorológica */
+    z-index: 1000;
+    text-align: center;
+}
+
+#weather-info {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fondo transparente similar al botón de WhatsApp */
+    padding: 5px;
+    /* Espaciado interno del contenedor de información meteorológica */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Sombra ligera */
+    max-width: 50%;
+    /* Ancho máximo del contenedor de información meteorológica */
+    margin: 0 auto;
+    /* Centra el contenedor en la página */
+    transition: background-color 0.3s ease;
+    /* Efecto de transición similar al botón de WhatsApp */
+}
+
+#weather-info h1 {
+    font-size: 0.8em;
+    /* Tamaño del texto del título */
+    margin-bottom: 30px;
+    /* Margen inferior del título */
+    color: #ff6347;
+    /* Color del texto del título similar al botón de WhatsApp */
+}
+
+#weather-info p {
+    margin: 0 0 8px;
+    /* Margen inferior del párrafo */
+    color: #ff6347;
+    /* Color del texto similar al botón de WhatsApp */
+}
+
+#weather-info i {
+    font-size: 24px;
+    /* Tamaño del ícono similar al botón de WhatsApp */
+    margin-top: 10px;
+    /* Margen superior del ícono */
+    color: #ff6347;
+    /* Color del ícono similar al botón de WhatsApp */
+}
+
+
+/* Cambio de color de fondo al pasar el mouse */
+
+#weather-info:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Cambia el color de fondo al pasar el mouse similar al botón de WhatsApp */
+}
+
+
+/* Estilo adicional para las cards */
+
+.ui.card {
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    /* Hace que las cards ocupen todo el ancho disponible */
+    max-width: 400px;
+    /* Establece un ancho máximo para cada card */
+    margin: 0 auto;
+    /* Centra las cards en el contenedor */
+}
+
+.ui.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* Sombra y efecto de elevación al pasar el mouse sobre la card */
+    transform: scale(1.05);
+    /* Escala ligeramente la card al pasar el mouse */
+}
+
+.ui.stackable.six.column.grid .column:last-child .ui.card {
+    margin-bottom: 50px;
+    /* Ajusta este valor según sea necesario */
+}
+
+.ui.stackable.four.column.grid .column:last-child .ui.card {
+    margin-bottom: 50px;
+    /* Ajusta este valor según sea necesario */
+}
+
+
+/* Estilo para el contenedor horizontal de WhatsApp */
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 40px;
+    /* Ubicación vertical del contenedor de WhatsApp */
+    right: 20px;
+    /* Ubicación derecha del contenedor de WhatsApp */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* Estilo para la descripción de WhatsApp */
+
+.whatsapp-description,
+.whatsapp-icon {
+    color: #ff6347;
+    /* Color del texto de la descripción de WhatsApp */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fondo transparente de la descripción de WhatsApp */
+    padding: 10px;
+    /* Espaciado interno de la descripción de WhatsApp */
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+}
+
+
+/* Cambio de color de fondo al pasar el mouse */
+
+.whatsapp-container:hover .whatsapp-icon,
+.whatsapp-container:hover .whatsapp-description {
+    background-color: rgba(255, 255, 255, 0.6);
+    /* Cambia el color de fondo al pasar el mouse */
+}
+
+.whatsapp-container:hover .whatsapp-description {
+    color: orange !important;
+    /* Cambia el color del texto de la descripción al pasar el mouse */
+}
+
+
+/* Estilos para el modal */
+
+.ui.modal.rounded.transparent {
+    border-radius: 15px;
+    /* Redondea todas las esquinas del modal */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo transparente */
+}
+
+.ui.modal.rounded.transparent .header {
+    background-color: #ff6347;
+    /* Fondo del encabezado en rojo coral */
+    color: white;
+    /* Texto en color blanco */
+    border-top-left-radius: 15px;
+    /* Redondea la esquina superior izquierda del encabezado */
+    border-top-right-radius: 15px;
+    /* Redondea la esquina superior derecha del encabezado */
+}
+
+.ui.modal.rounded.transparent .content {
+    border-bottom-left-radius: 0px;
+    /* Redondea la esquina inferior izquierda del contenido */
+    border-bottom-right-radius: 0px;
+    /* Redondea la esquina inferior derecha del contenido */
+}
+
+.ui.modal.rounded.transparent .actions {
+    border-bottom-left-radius: 15px;
+    /* Redondea la esquina inferior izquierda de los botones de acción */
+    border-bottom-right-radius: 15px;
+    /* Redondea la esquina inferior derecha de los botones de acción */
+}
+
+.ui.modal.rounded.transparent .ui.button {
+    border-radius: 15px;
+    /* Desactiva el redondeo de los botones para que sigan la forma del modal */
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* Estilos para el pie de página */
+
+footer {
+    background-color: rgb( 255, 99, 71);
+    /* Fondo del pie de página en rojo coral */
+    color: #fff;
+    /* Texto en color blanco */
+    padding: 5px;
+    /* Espaciado interno del pie de página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    /* Color del texto de los enlaces en el pie de página */
+    text-decoration: none;
+    margin: 0 20px;
+    /* Margen derecho e izquierdo entre enlaces en el pie de página */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    /* Subrayado al pasar el mouse sobre un enlace en el pie de página */
+}
+
+
+/* Media queries para dispositivos móviles y tablets */
+
+@media screen and (max-width: 768px) {
+    /* Estilos generales para dispositivos móviles y tablets */
+    body {
+        background-color: #3030292c;
+        /* Fondo claro para toda la página en dispositivos móviles */
+        font-family: 'Roboto', sans-serif;
+        /* Asegura que se use Roboto u otra fuente sans-serif en dispositivos móviles */
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        padding: 0.5em 0;
+    }
+    .ui.inverted.menu.grey.fixed {
+        padding: 0em 0.5em;
+    }
+    .ui.inverted.menu.grey.fixed a {
+        margin: 0 10px;
+    }
+    .social-icons,
+    #weather-container,
+    .whatsapp-container {
+        right: 5px;
+    }
+    .whatsapp-container {
+        bottom: 40px;
+    }
+    footer {
+        padding: 0.5em;
+    }
+    footer a {
+        margin: 0 5px;
+    }
+    /* Estilos específicos para la sección 'discover-container' en dispositivos móviles */
+    .discover-container {
+        background-color: #fff;
+        /* Fondo claro */
+    }
+    .discover-container .ui.header.discover {
+        font-size: 3vw;
+        /* Tamaño del texto del título en dispositivos móviles */
+        text-shadow: 0.5vw 0.5vw 0.5vw rgba(0, 0, 0, 0.1);
+        /* Sombra suave del texto */
+        margin: 2vw;
+        /* Margen del título */
+    }
+    .discover-container .ui.header.discover::after {
+        height: 0.5vw;
+        /* Grosor de la línea debajo del título */
+        width: 50vw;
+        /* Longitud de la línea debajo del título */
+        margin: 1vw auto;
+        /* Margen de la línea debajo del título */
+    }
+    /* Estilos específicos para la sección 'weather-info' en dispositivos móviles */
+    #weather-info {
+        max-width: 13vw;
+        /* Ancho máximo del contenedor de información meteorológica */
+        font-size: 2vw;
+        /* Tamaño del texto en dispositivos móviles */
+    }
+    /* Estilos específicos para las 'ui.card' en dispositivos móviles */
+    .ui.card {
+        border-radius: 5vw;
+        /* Esquinas redondeadas en dispositivos móviles */
+        max-width: 70vw;
+        /* Ancho máximo de las cards en dispositivos móviles */
+    }
+    /* Oculta el video en dispositivos móviles */
+    #video-container {
+        display: none;
+    }
+}
